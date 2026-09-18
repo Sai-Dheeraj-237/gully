@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-09-18T04:27:29.440Z",
+  "checks": [
+    "18+ onboarding and feed",
+    "Votes toggle and change direction without double counting",
+    "Save and saved collection",
+    "Pulse poll",
+    "Post creation and HTML escaping",
+    "Persistence after reload",
+    "Nested comment replies",
+    "Global search across content types",
+    "Community membership",
+    "Confession publishing",
+    "Marketplace 3km radius and price sort",
+    "Listing form, photo attachment, and My listings",
+    "Seller conversation and local messages",
+    "Expired conversations are purged",
+    "Squad request and explicitly simulated acceptance",
+    "Create a squad with Hyderabad date",
+    "City megathread contribution",
+    "Report and block hide content",
+    "Notification preferences and unblock",
+    "Email verification UI and invalid-code state",
+    "Microphone recording and IndexedDB playback after reload",
+    "All main screens fit 390px viewport",
+    "All main screens fit 768px viewport",
+    "All main screens fit 1440px viewport",
+    "Mobile composer and keyboard dismissal",
+    "No uncaught browser errors"
+  ],
+  "errors": []
+}
