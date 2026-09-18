@@ -44,3 +44,15 @@ Desktop home and mobile home, marketplace, and composer screenshots were visuall
 Audio tests used a synthetic microphone. This is browser verification, not physical iOS/Android device certification. The Expo WebView shell is provided as source and has not been built or tested on a native device. AWS authentication, backend authorization, moderation, push notifications, secure cross-device chat expiry, real location distances, and multi-user interactions are not implemented by this frontend demo.
 
 Main browser suite: `scripts/check-frontend.cjs`. Voice cutoff checks: `scripts/check-voice-limit.cjs`.
+
+## Baithak feature verification — 18 September 2026
+
+23 Baithak browser checks passed against the local source through request interception, with no local HTTP server. The existing 26-check main Gully suite also passed against the updated source. This regression run includes the existing voice confession recorder.
+
+Baithak coverage includes approved-only discovery; 12-hour scheduling validation; duration/capacity bounds; IST conversion in a Chicago browser; HTML escaping; persistence and direct links; admin approval/rejection; approval reset after edits; overlapping host requests; saved plans and calendar export; admission and hand raising; muted speaker entry; host mute restrictions; six-speaker capacity; removal and full-room admission; local reports; confirmed room ending; late-start deadlines; automatic expiry; expired reviews; withdrawal; 360/390/768/1440px layouts; mobile navigation and browser Back; and uncaught browser errors.
+
+Desktop discovery and mobile scheduling/room screenshots were visually inspected. The mobile room controls remain visible at the bottom of the screen.
+
+Run `scripts/check-baithak.cjs` with Playwright in a prepared environment. By default it intercepts local `docs/` files without a server. Set `GULLY_PREVIEW_URL` to test a deployed copy. The suite freezes and advances the browser clock for timing tests and uses isolated browser storage. Results are recorded in `scripts/baithak-verification-results.json`.
+
+No real multi-user audio, AWS authorization, server capacity enforcement, native mobile audio, or physical-device microphone behavior has been verified by these frontend tests.

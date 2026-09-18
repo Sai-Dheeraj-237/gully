@@ -1,0 +1,30 @@
+{
+  "at": "2026-09-18T22:14:45.623Z",
+  "url": "https://gully-preview.test/gully/",
+  "checks": [
+    "Discovery shows approved sessions only and identifies the local audio preview",
+    "Application validation rejects less than 12 hours of notice",
+    "Valid request persists, uses IST from a Chicago browser, escapes text, and enforces duration/capacity bounds",
+    "Request survives reload and direct detail link",
+    "Admin simulation approves the request; approved hosts cannot open before the scheduled time",
+    "Editing an approved request resets it to pending and clears approval",
+    "Decline stores a reason and allows a fresh request for approval",
+    "Overlapping host requests are rejected",
+    "Save to plans and real calendar download work without implying a seat reservation",
+    "Listener entry, raised hand, host invitation, and muted-by-default speaker work",
+    "Host can mute a speaker but cannot remotely unmute them",
+    "The stage is limited to six people including the host",
+    "Removed participants cannot rejoin the local room",
+    "Room capacity includes the host and prevents listener admission when full",
+    "Room reporting saves locally with an explicit delivery limitation",
+    "Host confirmation ends the room and clears the speaker queue",
+    "Late start preserves the original scheduled end time",
+    "Automatic cutoff persists across reload and the room cannot reopen",
+    "An unreviewed request expires and cannot be approved after its start",
+    "Minimum duration/capacity are accepted and a host can withdraw a request",
+    "Discovery, room, request details, review desk and scheduling fit 360/390/768/1440px screens",
+    "Mobile navigation and browser Back resolve Baithak detail routes",
+    "No uncaught browser errors or unsafe HTML execution"
+  ],
+  "errors": []
+}

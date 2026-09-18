@@ -45,3 +45,11 @@ Data fixtures: `docs/data.js`. State, routing and screens: `docs/app.js`. Dialog
 `scripts/check-frontend.cjs` tests the public preview with Playwright and takes desktop/mobile screenshots. It covers navigation, onboarding, votes, posts, nested replies, search, joins, confessions, listing images, radius/sort, messaging, expiry, squads, city updates, reporting, preferences, and demo sign-in. It also checks for horizontal overflow at 390, 768, and 1440 pixels and captures uncaught browser errors. Test data stays in an isolated browser context and never reaches a backend.
 
 For a prepared cloud development environment, install Playwright there and run `node scripts/check-frontend.cjs`; no laptop installation is needed. `GULLY_PREVIEW_URL` can point to another deployed preview.
+
+## Gully Baithak — scheduled audio room frontend
+
+The Baithak preview adds scheduled Hyderabad conversations, a Gully admin review simulation, and responsive room controls. Hosts request at least 12 hours ahead, choose 30/45/60 minutes and a cap of 15/20/25/30 people, and use IST for all session times. The stage holds at most six speakers including the host. Editing requires fresh approval; rooms finish at the original scheduled end.
+
+Open `#baithak` from the sidebar, home banner, or mobile navigation. The Upcoming, On air, and My plans tabs cover discovery, sample live rooms, and local requests. Expand Preview tools to try admin approval; sample room tools expose simulated host controls.
+
+**Live audio and real authorization are not connected.** Browser-local controls, participants, reports, and approvals are demonstrations. No microphone is accessed by Baithak. See [BAITHAK.md](BAITHAK.md) for the agreed rules, frontend scope, and AWS integration contract.
