@@ -4,7 +4,37 @@ An 18+ Hyderabad community frontend. Responsive desktop and mobile layouts with 
 
 Preview: https://sai-dheeraj-237.github.io/gully/
 
+## Open the app and find its source
+
+- [Open Gully Baithak](https://sai-dheeraj-237.github.io/gully/?v=baithak-verified-2#baithak)
+- [Browse all frontend source files](docs/)
+- [Baithak product rules and implementation notes](BAITHAK.md)
+
+**The executable web frontend is in `docs/` on the `main` branch.** GitHub Pages publishes this directory. The current app uses standard HTML, CSS, and JavaScript; several feature screens share a file.
+
+| Feature | Source to open | Functions / implementation |
+| --- | --- | --- |
+| Home, boards, and post cards | [docs/app.js](docs/app.js) | `feed`, `boardsPage`, `boardPage`, `postCard` |
+| Confessions | [docs/app.js](docs/app.js), [docs/interactions.js](docs/interactions.js) | `confessionsPage`, `recordVoice`, recording and playback storage |
+| Squad Match | [docs/app.js](docs/app.js), [docs/ui.js](docs/ui.js) | `squadsPage`, `squadModal`, `createSquad` |
+| Marketplace | [docs/app.js](docs/app.js), [docs/ui.js](docs/ui.js) | `marketPage`, `listingModal`, `sellModal` |
+| City Pulse, saved posts, search | [docs/app.js](docs/app.js) | `pulsePage`, `savedPage`, `searchPage` |
+| Messages, settings, onboarding and sign-in screens | [docs/ui.js](docs/ui.js) | `messagesPage`, `settingsPage`, `ageModal`, `loginModal` |
+| Votes, replies, forms, reporting, and local persistence | [docs/interactions.js](docs/interactions.js) | Click/submit handlers and browser storage |
+| Gully Baithak | [docs/baithak.js](docs/baithak.js) | Discovery, scheduling, admin simulation, rooms and timers |
+| Styling and sample content | [docs/styles.css](docs/styles.css), [docs/baithak.css](docs/baithak.css), [docs/data.js](docs/data.js) | Responsive layouts and fictional fixtures |
+| Mobile preview shell | [mobile/App.js](mobile/App.js) | Expo WebView wrapper displaying the shared web frontend |
+| Browser verification | [scripts/](scripts/), [TESTING.md](TESTING.md) | Frontend and Baithak checks |
+
+On desktop, **Gully Baithak** is in the left sidebar. On phones, **Baithak** is in the bottom navigation. Complete the 18+ introduction on your first visit.
+
+If an older tab is missing Baithak, open the direct link above and reload. Assets now have content versions, which let the browser fetch changed JavaScript and CSS when it receives a new page. An already-open page still needs a reload.
+
+The native file is a preview wrapper; a separate full native feature implementation has not been built. All backend-dependent interactions are browser-local simulations as described below.
+
 ## Frontend features
+
+- Gully Baithak with 12-hour advance requests, admin approval simulation, 30–60-minute rooms, 15–30 participants, and speaker/host controls.
 
 - Home feed with trending/new sorting, neighbourhood filters, followed communities, and daily poll.
 - Four community boards with join/leave controls and dedicated feeds.
